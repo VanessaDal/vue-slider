@@ -16,7 +16,7 @@
       <div id="app" class="container">
           <div class="slider-wrapper">
               <div class="prev" >
-                  <i class="fas fa-angle-left"></i>
+                  <i class="fas fa-angle-left" @click="previousPic"></i>
               </div>
               <div class="images">
                   <img :src="image[photoIndex]" alt="">
@@ -24,8 +24,11 @@
               <div class="next" @click="nextPic" >
                   <i class="fas fa-angle-right"></i>
               </div>
-              <div class="nav" @click="previousPic">
+              <div class="nav" >
+                <i class="fas fa-circle" v-for="dot in image"></i>
+                <!-- <i class="fas fa-circle"></i>
                 <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i> -->
               </div>
           </div>
       </div>
